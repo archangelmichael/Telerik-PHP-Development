@@ -25,10 +25,11 @@ if($_POST) {
         echo '<p style="color:red">Invalid group selection</p>';
         $error = true;
     }
-    
+        
     if (!$error) {
-        $result=$username.'!'.$phone.'!'.$selectedGroup."\n";
-        if(file_put_contents('data.txt', $result, FILE_APPEND)) {
+        $currentDate = date("Y-m-d h:i:sa");
+        $result=$currentDate.'!'.$username.'!'.$phone.'!'.$selectedGroup."\n";
+        if(file_put_contents($filePath, $result, FILE_APPEND)) {
             echo 'New entry added successfully <br/>';
         }
     }

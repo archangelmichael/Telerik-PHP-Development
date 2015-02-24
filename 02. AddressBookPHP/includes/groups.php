@@ -1,9 +1,9 @@
 <?php
-$groups = array(
+$groups = [
     0 =>'None', 
     1 => 'Friends', 
     2 => 'Family', 
     3 => 'Work', 
     4 => 'Relatives', 
-    5 => 'Colleagues');
-?>
+    5 => 'Colleagues'];
+$filePath = 'data.txt';
